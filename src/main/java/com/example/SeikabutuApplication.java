@@ -9,5 +9,5 @@ public class SeikabutuApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SeikabutuApplication.class, args);
 	}
-
+//test
 }
