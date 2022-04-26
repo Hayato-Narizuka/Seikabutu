@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+	<meta charset="UTF-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- CSS読み込み -->
+	<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/login/login.css}">
+	<!-- JS読み込み -->
+	<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+	<title>ログイン</title>
+</head>
+<body class="bg-secondary">
+	<div class="text-center">
+		<form method="post" th:action="@{/login}" class="form-login">
+			<h2>Login</h2>
+			<!-- メールアドレス -->
+			<div class="form-group">
+				<label for="userId">メールアドレス</label>
+				<input type="text" class="form-control" placeholder="xxxx@yyy.co.jp"
+					name="userId"/>		
+			</div>
+			<!-- パスワード -->
+			<div class="form-group">
+				<label for="password">パスワード</label>
+				<input type="text" class="form-control" placeholder="パスワード"
+					name="password"/>
+			</div>
+			<input type="submit" value="ログイン" class="btn btn-primary"/>
+		</form>
+		<a th:href="@{/user/signup}">新規登録はこちら</a>
+		<a th:href="@{/user/password}">パスワードを忘れた方はこちら</a>
+	</div>
+</body>
+</html>
