@@ -11,7 +11,7 @@
 	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
 	<title>ログイン</title>
 </head>
-<body class="bg-secondary">
+<body class="bg-light">
 	<div class="text-center">
 		<form method="post" th:action="@{/login}" class="form-login">
 			<h2>Login</h2>
@@ -29,8 +29,8 @@
 			</div>
 			<input type="submit" value="ログイン" class="btn btn-primary"/>
 		</form>
-		<a th:href="@{/user/signup}">新規登録はこちら</a>
-		<a th:href="@{/user/password}">パスワードを忘れた方はこちら</a>
+		<p><a th:href="@{/user/signup}">ユーザー登録申請はこちら</a></p>
+		<p><a th:href="@{/user/password}">パスワードを忘れた方はこちら</a></p>
 	</div>
 </body>
 </html>
