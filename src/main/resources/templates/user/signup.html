@@ -19,7 +19,6 @@
 		<div class="form-group">
 			<label for="name">名前</label>
 			<input type="text" class="form-control"/>
-			<div class="invalidfeedback" th:errors="*{userId}"></div>
 		</div>
 		<!-- メールアドレス -->
 		<div class="form-group">
@@ -37,9 +36,13 @@
 			<input type="text" class="form-control"/>
 		</div>
 		<!-- 申請ボタン -->
+		<div class="mx-auto" style="width: 200px;">
 		<input type="button" value="申請する"
 			class="btn btn-primary w-100 mt-3"/>
+		</div>
 	</form>
-	<a th:href="@{/login}">ログイン画面に戻る</a>
+	<p class="text-center">
+		<a th:href="@{/login}">ログイン画面に戻る</a>
+	</p>
 </body>
 </html>

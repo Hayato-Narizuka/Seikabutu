@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SignupController {
 	
 	/**ユーザー登録画面を表示*/
-	public String getSignup(Model model) {
+	@GetMapping("/signup")
+	public String getSignup() {
 		
 		//ユーザー登録画面に遷移
 		return "user/signup";
