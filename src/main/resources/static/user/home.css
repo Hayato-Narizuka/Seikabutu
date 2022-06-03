@@ -1,0 +1,9 @@
+.box {
+ margin: 2em auto;
+ padding: 1em;
+ width: 90%; /* ボックス幅 */
+ background-color: #FFFFFF; /* ボックス背景色 */
+ color: #666; /* 文章色 */
+ box-shadow: 0 0 5px 1px #c0c0c0; /* 影 */
+ border-radius: 10px; /* 角の丸み */
+}
