@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}">
+<head>
+	<title>ユーザーホーム</title>
+	<!-- 個別CSS読込 -->
+	<link rel="stylesheet" th:href="@{/css/user/home.css}">
+</head>	
+<body>
+	<div layout:fragment="content" class="bg-light">
+		<div class="text-center">
+			<form method="post" th:action="@{/user/home}" class="form-home">
+				<h2>2021年12月18日(土)</h2>
+				<div class="my-4" style="padding: 30px; margin: auto; width: 350px; font-weight: bolder; 
+					background-color: #fff;">
+					<P>現在契約中の会社 : LIM</P>
+					<P>最低稼働時間まで : 162時間0分</P>
+					<P>今月の稼働時間 : ８時間0分</P>
+				</div>
+				<input type="submit" value="今日の勤務時間登録" class="btn btn-primary"/>
+				<input type="submit" value="過去の勤務時間詳細・変更" class="btn btn-primary"/>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
