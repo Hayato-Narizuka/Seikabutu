@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/user/signup.css}">
+    <!-- JS読込 -->
+    <script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+</head>
+<body>
+<div class="bg-light">
+    <form id="admin-detail-form" method="post" th:action="@{/admin/detail}"
+          class="form-signup" th:object="${adminDetailForm}">
+        <!-- ユーザー詳細情報 -->
+        <div class="my-4" style="padding: 30px; margin: auto; width: 350px; font-weight: bolder;
+		  background-color: #fff;">
+            <P>名前: いいちゅかはやちょ</P>
+            <P>メールアドレス: itsuka@xxx.co.jp</P>
+            <p>申請日時: 2020-09-01 23:25:07</p>
+        </div>
+        <div class="text-center">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" style="width: 140px; padding: auto;" data-toggle="modal" data-target="#exampleModal">
+                許可
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">許可の確認</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            申請を許可しますか?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">はい</button>
+                            <button type="button" class="btn btn-danger">いいえ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger" style="width: 140px; padding: auto;" data-toggle="modal" data-target="#exampleModal2">
+                拒否
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModal2Label">拒否の確認</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            2度とこのメールアドレスでは申請<br/>
+                            できなくなりますがよろしいですか?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">はい</button>
+                            <button type="button" class="btn btn-danger">いいえ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 20px;">
+                <a th:href="@{/admin/list}">未承認一覧画面へ戻る</a>
+            </p>
+        </div>
+    </form>
+</div>
+</body>
+</html>
