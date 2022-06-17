@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/user/signup.css}">
+    <!-- JS読込 -->
+    <script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+</head>
+<body>
+<div class="bg-white">
+    <form id="work-form" method="post" action="/admin/work"
+          class="form-work">
+        <h1 class="text-center">勤務時間登録変更申請者一覧</h1>
+        <!-- 一覧表示 -->
+        <div>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th width="500">名前</th>
+                    <th width="500">メールアドレス</th>
+                    <th width="500">申請時間</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>いいちゅかはやちょ</td>
+                    <td>itsuka@xxx.co.jp</td>
+                    <td>2020-09-01 23:25:07</td>
+                    <td>
+                        <a class="btn btn-primary">
+                            詳細
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>富田</td>
+                    <td>tomita@xxx.co.jp</td>
+                    <td>2020-09-01 23:25:07</td>
+                    <td>
+                        <a class="btn btn-primary" th:href="@{/admin/time}">
+                            詳細
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+</body>
+</html>
